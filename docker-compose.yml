@@ -1,0 +1,13 @@
+
+version: '2'
+
+services:
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra
+    # Ports needed by the container
+    ports:
+      - "9160:9160"
+      - "9042:9042"
+    volumes:
+    - ./db/cassandra:/scripts
